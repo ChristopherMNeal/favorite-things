@@ -11,7 +11,9 @@ $(document).ready(function() {
     const brandNewArray = [];
     brandNewArray.push(favArrayNew[1], favArrayNew[0], favArrayNew[2]);
     
-    $("#fav-things-list").append("<li>" + favArrayNew[1] + "</li> <li>" + favArrayNew[0] + "</li> <li>" + favArrayNew[2] + "</li>")
+    brandNewArray.forEach(function(thing) {
+      $("#fav-things-list").append("<li>" + thing + "!</li>");
+    });
   });  
 });
 
